@@ -1,0 +1,22 @@
+ version: "3.7"
+ services:
+  transmission:
+    image: lscr.io/linuxserver/transmission
+    container_name: transmission
+    environment:
+      - PUID=1026 # User id
+      - PGID=100 # Group id
+      - TZ=America/New_York # Your current timezone
+      - USER=TheFinalHawk
+      - PASS=Gabebryl707*
+      - TRANSMISSION_WEB_HOME=/combustion-release/ #changes webUI for transmission
+    network_mode: "container:gluetun"
+    volumes:
+      - /volume1/docker/config/transmission:/config
+      - /volume1/docker/universalmedia:/data #universal media will act as the root folder with additional subfolders added after container deployed
+      - /volume1/docker/universalmedia/downloads:/data/downloads
+  #remove hashtags to enable ports when not using gluetunvpn  ports:
+    #  - 9091:9091 # Web UI port
+    #  - 51413:51413 # Torrent port (TCP)
+    #  - 51413:51413/udp # Torrent port (UDP)
+    restart: unless-stopped # This makes sure that the application restarts when it crashes
