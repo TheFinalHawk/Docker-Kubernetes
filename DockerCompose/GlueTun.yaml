@@ -12,9 +12,9 @@ services:
       - 8888:8888/tcp # HTTP proxy
       - 8388:8388/tcp # Shadowsocks
       - 8388:8388/udp # Shadowsocks
-      - 9091:9091
-      - 51413:51413
-      - 51413:51413/udp
+      - 9091:9091 # port to open for transmission
+      - 51413:51413 # port to open for transmission
+      - 51413:51413/udp # port to open for transmission
     volumes:
       - /volume1/docker/config/gluetun:/config
       - /volume1/docker/universalmedia:/data
