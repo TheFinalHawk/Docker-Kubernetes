@@ -24,8 +24,8 @@ services:
       - VPN_SERVICE_PROVIDER=NORDVPN
       - VPN_TYPE=openvpn
       # OpenVPN:
-      - OPENVPN_USER=xthefinalhawkxx@gmail.com
-      - OPENVPN_PASSWORD=Ruggerstrash707
+      - OPENVPN_USER= #enter vpn email here
+      - OPENVPN_PASSWORD= #enter VPN password here
       # Wireguard:
       # - WIREGUARD_PRIVATE_KEY=wOEI9rqqbDwnN8/Bpp22sVz48T71vJ4fYmFWujulwUU=
       # - WIREGUARD_ADDRESSES=10.64.222.21/32
